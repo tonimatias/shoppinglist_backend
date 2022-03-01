@@ -8,4 +8,4 @@ create table item (
     amount smallint usigned not null
 );
 
-insert into into item (description,amount) values ('Test item', 1)
+insert into item (description,amount) values ('Test item', 1)

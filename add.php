@@ -8,8 +8,8 @@ $description = filter_var($input->description,FILTER_SANITIZE_SPECIAL_CHARS);
 try {
     $db = openDB();
     
-    $query = $db->prepare('insert into shoppinglist(description) values (:description)');
-    $query = $db->prepare('insert into shoppinglist(amout) values (:amount)');
+    $query = $db->prepare('insert into item(description) values (:description)');
+    $query = $db->prepare('insert into item(amout) values (:amount)');
     $query->bindValue(':description',$description, PDO::PARAM_STR);
     $query->bindValue(':amount',$amount, PDO::PARAM_STR);
     $query->execute();
